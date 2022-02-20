@@ -1,8 +1,27 @@
 package Company;
 
 public class Periodical extends Item{
-    @Override
+    private int issueNum;
+
+    public int getIssueNum() {
+        return issueNum;
+    }
+
+    public void setIssueNum(int issueNum) {
+        this.issueNum = issueNum;
+    }
+
+    public Periodical(){}
+
+    public Periodical(String title, int issueNum)
+    {
+     super(title);
+     this.issueNum= issueNum;
+    }
+
     public String getListing() {
-        return null;
+        return "Periodical Title - " +this.getTitle()+"\n"+
+                "Issue # - "+this.getIssueNum()+"\n";
     }
 }
+
